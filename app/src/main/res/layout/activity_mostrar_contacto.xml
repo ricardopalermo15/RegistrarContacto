@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MostrarContacto">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textStyle="bold"
+        android:textSize="@dimen/nombre"
+        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginLeft="@dimen/margen_left"/>
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fecha"
+        android:textSize="@dimen/standard"
+        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginLeft="@dimen/margen_left"/>
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telefono"
+        android:textSize="@dimen/standard"
+        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginLeft="@dimen/margen_left"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="@dimen/standard"
+        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginLeft="@dimen/margen_left"/>
+
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/descripcion"
+        android:textSize="@dimen/standard"
+        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginLeft="@dimen/margen_left"/>
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescripcion"
+        android:layout_marginTop="@dimen/margen_top"
+        android:text="@string/btn_Editar"
+        android:theme="@style/MiBotonRaised"/>
+
+
+</LinearLayout>
