@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margen_top">50dp</dimen>
+    <dimen name="margen_separador">35dp</dimen>
     <dimen name="margen_left">10dp</dimen>
+    <dimen name="confirmar">40dp</dimen>
     <dimen name="nombre">30dp</dimen>
     <dimen name="standard">20sp</dimen>
 </resources>

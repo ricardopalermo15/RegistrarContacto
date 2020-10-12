@@ -8,13 +8,25 @@
     tools:context=".MostrarContacto">
 
     <TextView
+        android:id="@+id/tvConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/confirmar"
+        android:textStyle="bold"
+        android:textSize="@dimen/confirmar"
+        android:textColor="@color/color_boton"
+        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginLeft="@dimen/margen_left"/>
+
+    <TextView
         android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre"
         android:textStyle="bold"
         android:textSize="@dimen/nombre"
-        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginTop="@dimen/margen_separador"
         android:layout_marginLeft="@dimen/margen_left"/>
 
     <TextView
@@ -23,7 +35,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fecha"
         android:textSize="@dimen/standard"
-        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginTop="@dimen/margen_separador"
         android:layout_marginLeft="@dimen/margen_left"/>
 
     <TextView
@@ -32,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="@string/telefono"
         android:textSize="@dimen/standard"
-        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginTop="@dimen/margen_separador"
         android:layout_marginLeft="@dimen/margen_left"/>
 
     <TextView
@@ -41,7 +53,7 @@
         android:layout_height="wrap_content"
         android:text="@string/email"
         android:textSize="@dimen/standard"
-        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginTop="@dimen/margen_separador"
         android:layout_marginLeft="@dimen/margen_left"/>
 
     <TextView
@@ -50,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="@string/descripcion"
         android:textSize="@dimen/standard"
-        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginTop="@dimen/margen_separador"
         android:layout_marginLeft="@dimen/margen_left"/>
 
     <Button
@@ -58,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvDescripcion"
-        android:layout_marginTop="@dimen/margen_top"
+        android:layout_marginTop="@dimen/margen_separador"
         android:text="@string/btn_Editar"
         android:theme="@style/MiBotonRaised"/>
 

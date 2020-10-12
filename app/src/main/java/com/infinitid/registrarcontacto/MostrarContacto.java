@@ -2,39 +2,46 @@ package com.infinitid.registrarcontacto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MostrarContacto extends AppCompatActivity {
 
-    private TextView tvNombre;
-    private TextView tvFecha;
-    private TextView tvTelefono;
-    private TextView tvEmail;
-    private TextView tvDescripcion;
+
+    TextView nombre, fecha, telefono, email, descripcion;
+    Button btEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_contacto);
 
-        Bundle paramentros = getIntent().getExtras();
-        String nombre = paramentros.getString(getResources().getString(R.string.pnombre));
-        String fecha = paramentros.getString(getResources().getString(R.string.pfecha));
-        String telefono = paramentros.getString(getResources().getString(R.string.ptelefono));
-        String email = paramentros.getString(getResources().getString(R.string.pemail));
-        String descripcion = paramentros.getString(getResources().getString(R.string.pdescripcion));
+        nombre = (TextView) findViewById(R.id.tvNombre);
+        fecha = (TextView) findViewById(R.id.tvFecha);
+        telefono = (TextView) findViewById(R.id.tvTelefono);
+        email = (TextView) findViewById(R.id.tvEmail);
+        descripcion = (TextView) findViewById(R.id.tvDescripcion);
+        btEditar = (Button) findViewById(R.id.btnEditar);
 
-        tvNombre = (TextView) findViewById(R.id.tvNombre);
-        tvFecha = (TextView) findViewById(R.id.tvFecha);
-        tvTelefono = (TextView) findViewById(R.id.tvTelefono);
-        tvEmail = (TextView) findViewById(R.id.tvEmail);
-        tvDescripcion = (TextView) findViewById(R.id.tvDescripcion);
+        nombre.setText(getIntent().getStringExtra(getResources().getString(R.string.pnombre)));
+        fecha.setText(getIntent().getStringExtra(getResources().getString(R.string.pfecha)));
+        telefono.setText(getIntent().getStringExtra(getResources().getString(R.string.ptelefono)));
+        email.setText(getIntent().getStringExtra(getResources().getString(R.string.pemail)));
+        descripcion.setText(getIntent().getStringExtra(getResources().getString(R.string.pdescripcion)));
 
-        tvNombre.setText(nombre);
-        tvFecha.setText(fecha);
-        tvTelefono.setText(telefono);
-        tvEmail.setText(email);
-        tvDescripcion.setText(descripcion);
+        btEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MostrarContacto.this, MainActivity.class);
+                intent.putExtra(getResources().getString(R.string.pnombre), nombre.getText().toString());
+                intent.putExtra(getResources().getString(R.string.ptelefono), telefono.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pemail), email.getText().toString());
+                intent.putExtra(getResources().getString(R.string.pdescripcion), descripcion.getText().toString());
+                startActivity(intent);
+            }
+        });
     }
 }

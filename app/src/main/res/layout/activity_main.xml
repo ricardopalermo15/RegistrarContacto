@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiedtNombre"
+        android:id="@+id/edtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_top"
         android:hint="Nombre"/>
 
     <TextView
         android:id="@+id/tvFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/edtNombre"
         android:text="Fecha de nacimiento"/>
 
     <DatePicker
         android:id="@+id/dpFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvFecha"
         android:layout_centerHorizontal="true"
         android:datePickerMode="spinner"
         android:calendarViewShown="false"/>
+
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiedtTelefono"
+        android:id="@+id/edtTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/dpFecha"
         android:hint="Teléfono"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiedtEmail"
+        android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/edtTelefono"
         android:hint="Email"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiedtDescripcion"
+        android:id="@+id/edtDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/edtEmail"
         android:hint="Descripción"/>
 
     <Button
         android:id="@+id/btnSiguiente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tiedtDescripcion"
+        android:layout_below="@id/edtDescripcion"
         android:text="@string/btn_Siguiente"
         android:theme="@style/MiBotonRaised"/>
 
-</LinearLayout>
+</RelativeLayout>

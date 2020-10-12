@@ -2,6 +2,7 @@
     <string name="app_name">RegistrarContacto</string>
     <string name="btn_Siguiente">Siguiente</string>
     <string name="btn_Editar">Editar datos</string>
+    <string name="confirmar">Confirmar datos</string>
     <string name="nombre">Nombre</string>
     <string name="fecha">Fecha de nacimiento:</string>
     <string name="telefono">Teléfono:</string>
